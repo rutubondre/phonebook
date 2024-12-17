@@ -24,6 +24,23 @@
             omii: "864170472",
 
         }
+
+        function search() {
+            const searchInput = document.getElementById("search");
+            const query = searchInput.value.toLowerCase();
+
+            const mobile = contacts[query]
+
+
+
+            const result = document.getElementById("result");
+
+            if (mobile) {
+                result.innerText = `mobile number of ${query} is ${mobile}`;
+            } else {
+                result.innerText = 'cannot not found';
+            }
+        }
     </script>
 
 </body>
